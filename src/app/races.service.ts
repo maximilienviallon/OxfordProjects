@@ -5,6 +5,9 @@ export interface IRace {
   _id: string;
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 
 export class RacesService {
 

@@ -12,6 +12,7 @@ import { RaceFilterPipe } from './home-page/race-filter.pipe';
 import { PastRacesComponent } from './past-races/past-races.component';
 import { OngingRaceComponent } from './onging-race/onging-race.component';
 import { ParticipantsListComponent } from './participants-list/participants-list.component';
+import { ParticipantFilterPipe } from './onging-race/participant-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ParticipantsListComponent } from './participants-list/participants-list
     PastRacesComponent,
     OngingRaceComponent,
     ParticipantsListComponent,
+    ParticipantFilterPipe
   ],
   imports: [
     BrowserModule,

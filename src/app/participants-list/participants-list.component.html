@@ -1,1 +1,6 @@
-<p>participants-list works!</p>
+<input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm"/>
+
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let participant of participants | participantFilter:searchTerm">{{participant.name}}</li>
+</ul>

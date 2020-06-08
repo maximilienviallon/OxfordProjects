@@ -12,14 +12,11 @@ import { Subscription } from 'rxjs';
 })
 export class OngingRaceComponent implements OnInit {
   public participants: IParticipant[];
-  private subscription = new Subscription();
+  
   constructor(private participantsService: ParticipantsService) { }
 
   ngOnInit(): void {
-    this.subscription.add(
-      this.participantsService.getParticipants().
-    
-    )
+    this.participants = this.participantsService.getParticipants();
   }
 
 }
