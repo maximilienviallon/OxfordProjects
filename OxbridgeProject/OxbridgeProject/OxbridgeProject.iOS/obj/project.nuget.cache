@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "jKVikVcV5j6SrLrHSVfwtt/pd3tg4MR1q3WBcedLE4MpUqTvsA1Hpa6I4h67GXVi6iWN+b6QY+ZDHkNPsXqFTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\45502\\source\\repos\\OxfordProjects\\OxbridgeProject\\OxbridgeProject\\OxbridgeProject.iOS\\OxbridgeProject.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\45502\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
+    "C:\\Users\\45502\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\45502\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
+    "C:\\Users\\45502\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.847\\xamarin.forms.maps.4.6.0.847.nupkg.sha512"
+  ],
+  "logs": []
+}
