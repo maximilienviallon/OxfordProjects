@@ -1,0 +1,22 @@
+.flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .placement {
+    font-size: 2rem;
+    margin-right: 0.7rem;
+  }
+  
+  .participant-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .participant-team-name {
+    font-size: 0.9rem;
+    color: #919191;
+  }
+  li {
+      cursor: pointer;
+  }

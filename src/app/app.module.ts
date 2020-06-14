@@ -12,7 +12,14 @@ import { RaceFilterPipe } from './home-page/race-filter.pipe';
 import { PastRacesComponent } from './past-races/past-races.component';
 import { OngingRaceComponent } from './onging-race/onging-race.component';
 import { ParticipantsListComponent } from './participants-list/participants-list.component';
+import { AngularGmapComponent } from './angular-gmap/angular-gmap.component';
 import { ParticipantFilterPipe } from './onging-race/participant-filter.pipe';
+import { FutureRacesComponent } from './future-races/future-races.component';
+import { pastRaceFilterPipe } from './home-page/past-race-filter.pipe';
+import { futureRaceFilterPipe } from './home-page/future-race-filter-pipe';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { LoggedUserDetailComponent } from './logged-user-detail/logged-user-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +29,18 @@ import { ParticipantFilterPipe } from './onging-race/participant-filter.pipe';
     HomePageComponent,
     RaceDetailsComponent,
     CreateRaceComponent,
+    pastRaceFilterPipe,
     RaceFilterPipe,
+    futureRaceFilterPipe,
     PastRacesComponent,
     OngingRaceComponent,
     ParticipantsListComponent,
-    ParticipantFilterPipe
+    ParticipantFilterPipe,
+    AngularGmapComponent,
+    FutureRacesComponent,
+    SignUpComponent,
+    LogInComponent,
+    LoggedUserDetailComponent
   ],
   imports: [
     BrowserModule,

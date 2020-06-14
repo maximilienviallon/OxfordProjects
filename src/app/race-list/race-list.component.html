@@ -4,5 +4,7 @@
 
 
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let race of races | raceFilter:searchTerm"><a [routerLink]="['/race', race._id]">{{race.name}}</a></li>
+    <li class="list-group-item" *ngFor="let pastrace of pastraces | pastRaceFilter:searchTerm"><a [routerLink]="['/past-race', pastrace._id]">{{pastrace.name}}</a></li>
+    <li class="list-group-item" *ngFor="let race of races | raceFilter:searchTerm"><a [routerLink]="['/ongoing-race', race._id]">{{race.name}}</a></li>
+    <li class="list-group-item" *ngFor="let futurerace of futureraces | futureRaceFilter:searchTerm"><a [routerLink]="['/future-race', futurerace._id]">{{futurerace.name}}</a></li>
 </ul>

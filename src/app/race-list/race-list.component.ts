@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IRace } from '../races.service';
+import { IRace, IFutureRace, IPastRace } from '../races.service';
 
 @Component({
   selector: 'app-race-list',
@@ -10,6 +10,8 @@ export class RaceListComponent implements OnInit {
 
   @Input() title: string;
   @Input() races: IRace[];
+  @Input() futureraces: IFutureRace[];
+  @Input() pastraces: IPastRace[];
   @Input() searchTerm: string;
   
   constructor() {}

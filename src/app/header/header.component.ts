@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User, UserService, Permission } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public currentUser: User;
 
-  ngOnInit(): void {
+  constructor(private userService: UserService) {
+
+  }
+
+  ngOnInit() {
+    this.currentUser = this.userService.getUser();
+  }
+
+  public isAdmin() {
+    return this.currentUser.permission === Permission.ADMIN;
   }
 
 }

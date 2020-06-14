@@ -1,1 +1,8 @@
-<p>past-races works!</p>
+<div class="container">
+    <div class="row">
+  <div class="col-8">
+    <app-participants-list title="participants" [participants]="pastRace.members" (selectParticipant)="selectParticipant($event)"></app-participants-list> 
+  
+    </div>
+  </div>
+</div>

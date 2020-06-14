@@ -1,5 +1,5 @@
 import {PipeTransform, Pipe} from '@angular/core';
-import { IRace } from '../races.service';
+import { IRace, IPastRace, IFutureRace } from '../races.service';
 
 @Pipe({
     name:'raceFilter'
@@ -9,8 +9,10 @@ export class RaceFilterPipe implements PipeTransform{
             if (!races || !searchTerm){
                 return races;
             }
-
+           
             return races.filter(race => 
                 race.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
+            }
+           
+           
     }
-}

@@ -1,6 +1,13 @@
 <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm"/>
 
-
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let participant of participants | participantFilter:searchTerm">{{participant.name}}</li>
+    <li class="list-group-item" *ngFor="let participant of participants | participantFilter:searchTerm" (click)="selectParticipant.emit(participant._id)">
+      <div class="flex-container">
+        <div class="placement">{{ participant.position }}</div>
+        <div class="participant-info">
+          <span>{{ participant.name }}</span>
+          <span class="participant-team-name">{{ participant.teamName }}</span>
+        </div>
+      </div>
+    </li>
 </ul>

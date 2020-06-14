@@ -1,6 +1,7 @@
 import { PipeTransform, Pipe } from '@angular/core';
 import { IParticipant } from '../participants.service';
 
+
 @Pipe({
     name:'participantFilter'
 })

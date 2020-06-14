@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IParticipant } from '../participants.service';
+
 
 @Component({
   selector: 'app-participants-list',
@@ -9,6 +10,7 @@ import { IParticipant } from '../participants.service';
 export class ParticipantsListComponent implements OnInit {
   @Input() participants: IParticipant[];
   @Input() searchTerm: string;
+  @Output() selectParticipant = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
