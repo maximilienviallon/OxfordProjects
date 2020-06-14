@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { User, UserService, Permission } from '../user.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { User, UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   public currentUser: User;
+
+  private subcription = new Subscription();
 
   constructor(private userService: UserService) {
 
@@ -16,10 +19,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.userService.getUser();
+
+    this.subcription.add(
+      this.userService.userChange.subscribe(user => this.currentUser = user)
+    )
   }
 
-  public isAdmin() {
-    return this.currentUser.permission === Permission.ADMIN;
+  ngOnDestroy() {
+    this.subcription.unsubscribe();
   }
+
+
 
 }
