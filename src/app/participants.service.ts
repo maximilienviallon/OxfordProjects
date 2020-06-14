@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+//same as races service but for participant
 
 export interface IParticipant {
   name: string;

@@ -5,6 +5,7 @@ import { IParticipant } from '../participants.service';
 @Pipe({
     name:'participantFilter'
 })
+//see future-race-filter-pipe.ts
 export class ParticipantFilterPipe implements PipeTransform{
     transform(participants: IParticipant[], searchTerm: string): IParticipant[] {
             if (!participants || !searchTerm){

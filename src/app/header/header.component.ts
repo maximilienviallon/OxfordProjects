@@ -7,6 +7,8 @@ import { User, UserService } from '../user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+//This component adds a header on each url, the header can change based on authentication so that if a user is already logged in they cannot 
+//log themselves in again without loging out first
 export class HeaderComponent implements OnInit, OnDestroy {
 
   public currentUser: User;

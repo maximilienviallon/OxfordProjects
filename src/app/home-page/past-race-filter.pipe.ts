@@ -4,6 +4,7 @@ import { IRace, IPastRace, IFutureRace } from '../races.service';
 @Pipe({
     name:'pastRaceFilter'
 })
+//see future-race-filter-pipe.ts
 export class pastRaceFilterPipe implements PipeTransform{
     transform(pastraces: IPastRace[], searchTerm: string): IPastRace[] {
             if (!pastraces || !searchTerm){

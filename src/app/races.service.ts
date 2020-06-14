@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { IParticipant } from './participants.service';
 
-
+//this service is for the mangement of races so we can retrieve data and send data to backend
 export interface ICoordinates{
 long: number;
 lat: number;
 }
+
 export interface IPastRace{
   name: string;
   members: IParticipant[];
