@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-logged-user-detail',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logged-user-detail.component.scss']
 })
 export class LoggedUserDetailComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private userservice: UserService) { }
 
   ngOnInit(): void {
   }
-
+  public logout(): void{
+    this.userservice.logout();
+  }
 }

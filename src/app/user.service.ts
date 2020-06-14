@@ -31,4 +31,8 @@ export class UserService {
   getUser(): User {
     return this.user;
   }
+  logout(): void{
+    this.user = undefined;
+    console.log(this.user);
+  }
 }
